@@ -41,7 +41,8 @@ function main_menu() {
                 generate_referral
                 ;;
             5)
-                read -p "按任意键返回主菜单..."
+                upgrade_version
+                ;;
             6)
                 echo "退出脚本。"
                 exit 0
@@ -200,7 +201,7 @@ function generate_referral() {
 
 # 升级版本 (2.0.5)
 function upgrade_version() {
-    echo "正在升级到版本 2.0.5..."
+    echo "正在升级到版本 2.0.6..."
 
     # 停止 pipe-pop 服务
     sudo systemctl stop pipe-pop
@@ -211,9 +212,9 @@ function upgrade_version() {
     echo "已删除旧版本 pop 文件。"
 
     # 下载新版本的 pop 到指定路径
-    wget -O /root/pipenetwork/pop "https://dl.pipecdn.app/v0.2.5/pop"
+    wget -O /root/pipenetwork/pop "https://dl.pipecdn.app/v0.2.6/pop"
     sudo chmod +x /root/pipenetwork/pop
-    echo "已下载并赋予执行权限，pop 已更新为版本 2.0.5。"
+    echo "已下载并赋予执行权限，pop 已更新为版本 2.0.6。"
 
     # 重新加载 systemd 配置
     sudo systemctl daemon-reload
