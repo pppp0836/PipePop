@@ -199,7 +199,7 @@ function generate_referral() {
     read -p "按任意键返回主菜单..."
 }
 
-# 升级版本 (2.0.5)
+# 升级版本 (2.0.6)
 function upgrade_version() {
     echo "正在升级到版本 2.0.6..."
 
